@@ -10,6 +10,8 @@ import Hero from '../components/LandingPage/Hero';
 import Projects from '../components/LandingPage/Projects';
 import About from '../components/LandingPage/About';
 import Contact from '../components/LandingPage/Contact';
+import ViewBlogButton from '../components/LandingPage/ViewBlogButton';
+
 import avatar from '../styles/images/avatar.jpg';
 
 const ProjectsWrapper = styled.div`
@@ -39,7 +41,8 @@ const AboutSub = styled.span`
 `;
 
 const AboutDesc = styled.div`
-  ${tw`text-grey-light text-lg md:text-l lg:text-xl font-sans pt-10 md:pt-16 text-justify`};
+  ${tw`text-grey-light text-lg md:text-l lg:text-xl font-sans pt-10 md:pt-16 text-justify leading-loose`};
+  opacity: 0.8;
 `;
 
 const DescLine = styled.p`
@@ -64,6 +67,7 @@ export default () => (
           Hello, <br /> I'm Vo Van Trung.
         </BigTitle>
         <SubTitle>Highly adaptable, result-driven problem solver seeking to build program that make people's lives easier</SubTitle>
+        <ViewBlogButton />
       </Hero>
       <Projects offset={1}>
         <Title>Recent Projects</Title>
