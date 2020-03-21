@@ -31,15 +31,20 @@ const AboutHero = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto m-0`};
+  ${tw`rounded-full w-32 xl:w-48 shadow-lg h-32 xl:h-48 m-0`};
 `;
 
 const AboutSub = styled.span`
   ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-xl lg:text-2xl xl:text-3xl`};
 `;
 
-const AboutDesc = styled.p`
+const AboutDesc = styled.div`
   ${tw`text-grey-light text-lg md:text-l lg:text-xl font-sans pt-10 md:pt-16 text-justify`};
+`;
+
+const DescLine = styled.p`
+  ${tw`mt-4`};
+  opacity: 0.8;
 `;
 
 const ContactText = styled.p`
@@ -58,35 +63,36 @@ export default () => (
         <BigTitle>
           Hello, <br /> I'm Vo Van Trung.
         </BigTitle>
-        <SubTitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</SubTitle>
+        <SubTitle>Highly adaptable, result-driven problem solver seeking to build program that make people's lives easier</SubTitle>
       </Hero>
       <Projects offset={1}>
-        <Title>Projects</Title>
+        <Title>Recent Projects</Title>
         <ProjectsWrapper>
           <ProjectCard
-            title="Freiheit"
-            link="https://www.behance.net/gallery/58937147/Freiheit"
+            title="Nichigas Platform"
+            link="https://www.nichigas.co.jp/"
             bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
           >
-            This project is my entry to Adobe's #ChallengeYourPerspective contest.
+            Application to support for call center of company. It works like a "mini google" of Nichigas.
           </ProjectCard>
           <ProjectCard
-            title="Harry Potter"
-            link="https://www.behance.net/gallery/52915793/Harry-Potter"
+            title="Curations Platform"
+            link="https://health-company.jp/"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
-            I entered the DOCMA 2017 award with this Harry Potter inspired image.
+            App with more than 100.000 users at the moment. Aim to encourage everyone to exercise and live in a healthy ways.
+            In some aspects, It can be considered as a game where people exercise to achieve mission and get gifts return.
           </ProjectCard>
           <ProjectCard
-            title="Tomb Raider"
-            link="https://www.behance.net/gallery/43907099/Tomb-Raider"
+            title="JCC Platform"
+            link="https://fundinno.com/"
             bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
           >
-            Recreation of a Tomb Raider Wallpaper (Fan Art)
+            This platform act as a bridge that connect investor to start-up company, give them a help to control their business as well as financial forecast.
           </ProjectCard>
           <ProjectCard
-            title="Eagle"
-            link="https://www.behance.net/gallery/38068151/Eagle"
+            title="Capital Medica Platform"
+            link="https://capimedi.com/"
             bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
           >
             A fantasy image manipulation relocating the habitat of wild animals.
@@ -94,35 +100,32 @@ export default () => (
         </ProjectsWrapper>
       </Projects>
       <About offset={3}>
-        <Title>About</Title>
+        <Title>More About Me</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Trung Vo" />
           <AboutSub>
-            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-            Emoji into my speech to better express myself. Winky face.
+            To me, programming is a way to make my life becomes meaningful.
+            I've made up my mind to spend my bloom of youth do coding stuff, to gain more and more experiences day by day.
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-          every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-          make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The kids
-          want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that all
-          right?
+          <DescLine>•  2 years of hands-on experience in Web development with Ruby On Rails.</DescLine>
+          <DescLine>•  1.5 years of hands-on experience in Web Frontend especially SPA with React and other latest trending technologies.</DescLine>
+          <DescLine>•  Have good knowledge of design patterns and building project using clean architecture (React).</DescLine>
+          <DescLine>•  Fast learning a new language and technique in a couple of days.</DescLine>
         </AboutDesc>
       </About>
       <Contact offset={4}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            Say <a href="mailto:vo.van.trung.0196@gmail.com">Hi</a> or find me on other platforms:{' '}
+            <a href="https://www.facebook.com/vvtrung96">Facbook</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2019 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>. Made by{' '}
-          <a href="https://www.lekoarts.de">LekoArts</a>.
+          &copy; 2020 by trungvv.{' '}
+          <a href="https://github.com/vvtrung/my-blog">Github Repository</a>
         </Footer>
       </Contact>
     </Parallax>
