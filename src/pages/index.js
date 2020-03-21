@@ -4,7 +4,7 @@ import tw from 'tailwind.macro';
 import { Parallax } from 'react-spring/renderprops-addons.cjs';
 
 import Layout from '../components/LandingPage/Layout';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../components/LandingPage/ProjectCard';
 import { Title, BigTitle, SubTitle, Inner } from '../components/common';
 import Hero from '../components/LandingPage/Hero';
 import Projects from '../components/LandingPage/Projects';
@@ -41,8 +41,7 @@ const AboutSub = styled.span`
 `;
 
 const AboutDesc = styled.div`
-  ${tw`text-grey-light text-lg md:text-l lg:text-xl font-sans pt-10 md:pt-16 text-justify leading-loose`};
-  opacity: 0.8;
+  ${tw`text-grey-light text-sm md:text-sm lg:text-xl font-sans pt-10 md:pt-16 text-justify leading-loose mt-8`};
 `;
 
 const DescLine = styled.p`
@@ -61,7 +60,7 @@ const Footer = styled.footer`
 export default () => (
   <>
     <Layout />
-    <Parallax pages={5}>
+    <Parallax pages={6}>
       <Hero offset={0}>
         <BigTitle>
           Hello, <br /> I'm Vo Van Trung.
@@ -103,7 +102,7 @@ export default () => (
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
-      <About offset={3}>
+      <About offset={3.5}>
         <Title>More About Me</Title>
         <AboutHero>
           <Avatar src={avatar} alt="Trung Vo" />
@@ -119,7 +118,7 @@ export default () => (
           <DescLine>•  Fast learning a new language and technique in a couple of days.</DescLine>
         </AboutDesc>
       </About>
-      <Contact offset={4}>
+      <Contact offset={5}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>

@@ -12,6 +12,7 @@
   "plugins": [
     "react",
     "jsx-a11y",
+    "react-hooks"
   ],
   "rules": {
     "func-names": [
@@ -255,6 +256,8 @@
           ]
         }
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
