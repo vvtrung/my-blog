@@ -5,9 +5,9 @@ import { theme } from '../styles/theme';
 import Layout from '../components/Blog/Layout';
 import Main from '../components/Blog/Main';
 
-export const BlogContext = React.createContext();
+export const BlogContext = React.createContext({ pickedCategories: [] });
 
-const defaultValue = { pickedCategories: [1] };
+const defaultValue = { pickedCategories: [0] };
 
 export default () => (
   <ThemeProvider theme={theme}>

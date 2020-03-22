@@ -4,11 +4,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import tw from 'tailwind.macro';
 
+import { color } from '../../styles/theme';
+
 const Container = styled.div`
   ${tw`flex flex-col items-center py-6 rounded-lg`};
   background: white;
   margin-bottom: 2rem;
-  margin: 3rem 3rem 0 0;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.03);
 `;
 
 const Avatar = styled(Image)`
@@ -23,11 +25,11 @@ const Autobiography = styled.h3`
 const Divider = styled.div`
   ${tw`w-16 h-px`};
   margin: 1rem;
-  background: ${p => p.theme.color.category};
+  background: ${color.category};
 `;
 
 const MoreInfo = styled.p`
-  margin: 0.5rem 3rem;
+  margin: 1rem 3rem 3rem 3rem;
 `;
 
 function Bio() {
