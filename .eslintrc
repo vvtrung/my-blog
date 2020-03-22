@@ -12,8 +12,11 @@
   "plugins": [
     "react",
     "jsx-a11y",
+    "react-hooks"
   ],
   "rules": {
+    "no-debugger": "warn",
+    "semi": "warn",
     "func-names": [
       "error",
       "always",
@@ -90,7 +93,7 @@
       "fit"
     ],
     "no-restricted-syntax": [
-      "error",
+      "warn",
       "DebuggerStatement",
       "LabeledStatement",
       "WithStatement"
@@ -168,6 +171,7 @@
         "devDependencies": true
       }
     ],
+    "import/no-cycle": [2, { "maxDepth": 1 }],
     "import/no-unresolved": "warn",
     "import/no-webpack-loader-syntax": "off",
     "import/no-named-as-default": "off",
@@ -255,6 +259,8 @@
           ]
         }
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

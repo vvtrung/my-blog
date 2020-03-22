@@ -10,11 +10,13 @@ module.exports = {
     social: {
       twitter: 'vvt',
     },
+    categories: [
+      'ALL', 'TECHNOLOGY', 'TRAVEL', 'POLITICS', 'LIFESTYLE',
+    ],
   },
   plugins: [
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-antd',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

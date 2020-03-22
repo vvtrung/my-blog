@@ -1,6 +1,8 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
+categories: "TECHNOLOGY / LIFESTYLE"
+cover: "cover-default.png"
 description: "Hello World"
 ---
 

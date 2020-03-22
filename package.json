@@ -1,18 +1,18 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "trungvv-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "my personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vo Van Trung vo.van.trung.0196@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/vvtrung/my-blog/issues"
   },
   "dependencies": {
     "antd": "^4.0.2",
     "babel-plugin-styled-components": "^1.10.7",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
-    "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-feed": "^2.3.26",
     "gatsby-plugin-google-analytics": "^2.1.34",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -55,7 +55,7 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/vvtrung/my-blog#readme",
   "keywords": [
     "gatsby"
   ],
@@ -63,7 +63,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/vvtrung/my-blog.git"
   },
   "scripts": {
     "build": "gatsby build",

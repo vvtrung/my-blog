@@ -1,74 +1,20 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
-import Bio from '../components/bio';
-import Layout from '../components/blogLayout';
-import SEO from '../components/SEO';
-import { rhythm } from '../utils/typography';
+import { theme } from '../styles/theme';
+import Layout from '../components/Blog/Layout';
+import Main from '../components/Blog/Main';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data, location } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+export const BlogContext = React.createContext({ pickedCategories: [] });
 
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={['blog', 'gatsby', 'javascript', 'react']}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          );
-        })}
+const defaultValue = { pickedCategories: [0] };
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    <BlogContext.Provider value={defaultValue}>
+      <Layout>
+        <Main />
       </Layout>
-    );
-  }
-}
-
-export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`;
+    </BlogContext.Provider>
+  </ThemeProvider>
+);
