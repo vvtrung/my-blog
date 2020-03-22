@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from 'antd';
 import { Link } from 'gatsby';
 
 import { responsible } from '../../styles/mixins';
@@ -18,13 +17,8 @@ const Button = styled(Link)`
   }
 `;
 
-const ArrowIcon = styled(Icon)`
-  margin-left: 12px;
-`;
-
 export default () => (
   <Button to="/blogs">
     VIEW MY BLOGS
-    <ArrowIcon type="arrow-right" />
   </Button>
 );
